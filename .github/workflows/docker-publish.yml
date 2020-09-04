@@ -26,6 +26,7 @@ jobs:
   push-dh:
     needs: test
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
